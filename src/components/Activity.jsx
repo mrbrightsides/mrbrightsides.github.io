@@ -3,12 +3,12 @@ import { Code2, Github, Link as LinkIcon, Timer } from "lucide-react";
 
 /** Quick links ditampilkan di bagian bawah */
 const quickLinks = [
-  { label: "Hackatime Dashboard", href: "https://hackatime.hackclub.com/", icon: Timer },
+  { label: "ELPEEF", href: "https://elpeef.com/", icon: Globe },
   { label: "My GitHub Profile", href: "https://github.com/mrbrightsides", icon: Github },
-  { label: "Wakatime (compat)", href: "https://wakatime.com/", icon: Timer },
+  { label: "Personal Website", href: "https://khudri.elpeef.com/", icon: LinkIcon },
   {
-    label: "GitHub Readme Stats",
-    href: "https://github.com/anuraghazra/github-readme-stats",
+    label: "Kumpulan Link", 
+    href: "https://s.id/khudri",
     icon: Code2,
   },
 ];
@@ -88,9 +88,6 @@ export default function Activity({
               src={getHackatimeImg(hackatimeUserId)}
             />
           </a>
-          <p className="text-xs text-white/60 mt-2">
-            * Pastikan akun Hackatime sudah tersambung & dibuat public.
-          </p>
         </motion.div>
 
         {/* GitHub Stats card */}

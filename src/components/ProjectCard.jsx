@@ -1,39 +1,64 @@
-import { ExternalLink } from "lucide-react";
+export default function ProjectCard({ project }) {
+  const { title, period, description, stack = [], links = {}, highlights = [] } = project;
 
-export default function ProjectCard({ p }) {
   return (
-    <article className="rounded-2xl border border-white/10 bg-white/5 p-5 hover:bg-white/10 transition">
-      <h3 className="text-lg font-semibold text-white">{p.title}</h3>
-      <p className="mt-2 text-sm text-gray-300">{p.desc}</p>
+    <div className="rounded-2xl border border-white/10 bg-white/5 p-5 hover:bg-white/[0.08] transition">
+      <div className="flex items-baseline justify-between gap-4">
+        <h3 className="text-base md:text-lg font-semibold text-white">{title}</h3>
+        {period && <span className="text-xs text-white/50">{period}</span>}
+      </div>
 
-      {p.tags?.length > 0 && (
-        <div className="mt-3 flex flex-wrap gap-2 text-xs">
-          {p.tags.map((t) => (
+      {description && (
+        <p className="mt-2 text-sm text-gray-300 leading-relaxed">
+          {description}
+        </p>
+      )}
+
+      {Array.isArray(highlights) && highlights.length > 0 && (
+        <ul className="mt-3 text-xs text-gray-400 list-disc list-inside space-y-1">
+          {highlights.map((h, i) => (
+            <li key={i}>{h}</li>
+          ))}
+        </ul>
+      )}
+
+      {Array.isArray(stack) && stack.length > 0 && (
+        <div className="mt-4 flex flex-wrap gap-2">
+          {stack.map((tag) => (
             <span
-              key={t}
-              className="rounded-md bg-black/40 border border-white/10 px-2 py-1"
+              key={tag}
+              className="px-2 py-1 text-[11px] rounded-lg bg-white/10 text-white/70"
             >
-              {t}
+              {tag}
             </span>
           ))}
         </div>
       )}
 
-      {p.links?.length > 0 && (
-        <div className="mt-4 flex flex-wrap gap-3">
-          {p.links.map((l) => (
+      {(links.demo || links.repo) && (
+        <div className="mt-4 flex items-center gap-4 text-sm">
+          {links.demo && (
             <a
-              key={l.href}
-              href={l.href}
+              href={links.demo}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-1 text-blue-300 hover:text-blue-200"
+              className="text-blue-400 hover:underline"
             >
-              <ExternalLink size={14} /> {l.label}
+              Demo
             </a>
-          ))}
+          )}
+          {links.repo && (
+            <a
+              href={links.repo}
+              target="_blank"
+              rel="noreferrer"
+              className="text-blue-400 hover:underline"
+            >
+              Repo
+            </a>
+          )}
         </div>
       )}
-    </article>
+    </div>
   );
 }

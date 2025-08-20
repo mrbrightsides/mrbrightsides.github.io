@@ -23,8 +23,7 @@ export default function Projects() {
       </div>
 
       <p className="text-white/80 mt-2">
-        Beberapa karya yang baru-baru ini aku kerjakan. Source code &amp; demo
-        tersedia bila memungkinkan.
+        Beberapa karya yang saya kerjakan:
       </p>
 
       <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

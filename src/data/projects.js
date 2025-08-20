@@ -1,14 +1,14 @@
 export const projects = [
   {
-    title: "STC Plugin – Smart Token & Reservation",
+    title: "STC Plugin dan seluruh ekosistemnya",
     period: "2025",
     description:
-      "Plugin untuk ekosistem STC: mint/generate token, reservasi, dan integrasi dApp. Fokus ke praktik Solidity yang aman + DX yang enak.",
+      "Plugin untuk ekosistem STC: mint/generate token, reservasi, dan integrasi dApp. Fokus ke praktik Solidity yang aman + DX yang nyaman. Di tambah dengan turunannya seperti STC GasVision, STC Analytics, STC Converter, dll.",
     links: {
-      demo: "https://stc.elpeef.com",     // ganti kalau ada
-      repo: "https://github.com/ELPEEF/stc-plugins", // contoh
+      demo: "https://smartourism.elpeef.com",
+      repo: "https://github.com/ELPEEF/smarttourismchain",
     },
-    stack: ["Solidity", "React", "Vite", "ethers.js", "Hardhat", "Tailwind"],
+    stack: ["Solidity", "React", "Vite", "ethers.js", "Hardhat", "Wagmi"],
     highlights: [
       "Fitur mint/generate token (ERC-20/721) + reservasi",
       "Integrasi wallet, network gating, dan notifikasi UX",
@@ -16,13 +16,13 @@ export const projects = [
     ],
   },
   {
-    title: "Islamichat – Smart Faith Assistant",
+    title: "SmartFaith FNA Islamichat – Smart Faith Assistant",
     period: "2025",
     description:
       "Asisten percakapan yang mengutamakan adab & etika. Rencana integrasi on-chain untuk jejak donasi & wakaf.",
     links: {
-      demo: "https://islamichat.elpeef.com", // ganti
-      repo: "https://github.com/mrbrightsides/islamichat", // ganti
+      demo: "https://islamichat.streamlit.app/",
+      repo: "https://github.com/mrbrightsides/IslamiChat",
     },
     stack: ["Next.js / React", "Tailwind", "LangChain", "EVM (planned)"],
     highlights: [
@@ -31,18 +31,18 @@ export const projects = [
     ],
   },
   {
-    title: "Web Rantai – React dApp Boilerplate",
+    title: "Web RANTAI – React dApp Boilerplate",
     period: "2025",
     description:
-      "Boilerplate dApp untuk integrasi wallet, jaringan, dan komponen UI siap pakai. Cocok buat prototyping cepat.",
+      "Boilerplate dApp untuk integrasi wallet, jaringan, dan komponen UI siap pakai. Sudah mampu SIWE.",
     links: {
-      demo: "https://web-rantai.elpeef.com", // ganti
-      repo: "https://github.com/mrbrightsides/web-rantai", // ganti
+      demo: "https://rantai.elpeef.com",
+      repo: Tidak push ke GH
     },
     stack: ["React", "Vite", "wagmi/ethers", "Tailwind", "Framer Motion"],
     highlights: [
       "Komponen Connect Wallet + Network switch",
-      "Template page: Dashboard, Transactions, Settings"
+      "Plan: Dashboard, Transactions, Settings"
     ],
   },
 ];

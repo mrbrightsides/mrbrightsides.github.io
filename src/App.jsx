@@ -5,36 +5,6 @@ import { Github, Mail, ExternalLink, ArrowRight, Calendar, Code2, Link as LinkIc
 import Projects from "./components/Projects";
 import Activity from "./components/Activity";
 
-const projects = [
-  {
-    title: "STC Plugin — Token Generator",
-    desc: "Plugin untuk generate token, campaign badge, dan integrasi reservasi pada ekosistem STC.",
-    links: [
-      { href: "https://github.com/mrbrightsides", label: "Repo / Docs" },
-      { href: "https://mrbrightsides.github.io", label: "Live" },
-    ],
-    tags: ["Solidity", "React", "Ethers.js", "EVM"],
-  },
-  {
-    title: "Islamichat — Smart Faith Assistant",
-    desc: "AI assistant untuk edukasi & ibadah harian, integrasi doa, qiblat, hafalan, dan LLM Q&A.",
-    links: [
-      { href: "https://elpeef.com", label: "Landing" },
-      { href: "https://github.com/mrbrightsides", label: "Repo" },
-    ],
-    tags: ["Android", "Streamlit", "LLM", "Product"],
-  },
-  {
-    title: "Web Rantai — dApp Frontend",
-    desc: "Frontend React untuk interaksi kontrak: STT token, Reservation, dan minting via plugin.",
-    links: [
-      { href: "https://mrbrightsides.github.io", label: "Demo" },
-      { href: "https://github.com/mrbrightsides", label: "Repo" },
-    ],
-    tags: ["React", "Vite", "Tailwind", "wagmi/ethers"],
-  },
-];
-
 const links = [
   { href: "https://elpeef.com", label: "elpeef.com" },
   { href: "https://khudri.elpeef.com", label: "khudri.elpeef.com" },
@@ -70,10 +40,10 @@ export default function Portfolio() {
           transition={{ duration: 0.6 }}
           className="text-4xl sm:text-5xl font-bold text-white"
         >
-          Building ethical Web3 tools & smart contract products.
+          Building Web3 tools & smart contract products.
         </motion.h1>
         <p className="mt-4 text-lg text-gray-300 text-justify">
-          Dosen & peneliti yang suka shipping produk: STC plugin, Islamichat, dan Web Rantai. Fokus pada Solidity, React, dan pengalaman
+          Dosen & peneliti yang suka build, compile, deploy, dan ship produk: STC plugin serta seluruh ekosistemnya, SmartFaith FNA Islamichat, dan Web3 Rantai. Fokus pada Solidity, React, dan pengalaman
           pembelajaran yang bermanfaat untuk komunitas.
         </p>
         <div className="mt-6 flex flex-wrap gap-3">
@@ -97,13 +67,13 @@ export default function Portfolio() {
         <h2 className="text-3xl md:text-4xl font-bold text-white">About</h2>
         <p className="mt-3 text-gray-300 text-justify leading-relaxed">
           Saya membangun aplikasi terapan Web3 dan AI: kontrak pintar (Solidity), integrasi dApp (React), serta edukasi
-          berbasis riset. Saat ini mengerjakan <span className="text-white">STC Plugin</span> untuk mint/generate token & reservasi,
-          dan <span className="text-white">Islamichat</span> sebagai smart faith assistant.
+          berbasis riset. Saat ini mengerjakan ekosistem <span className="text-white">STC</span> untuk mint/generate token & reservasi,
+          dan berbagai <span className="text-white">Aplikasi</span> yang berkaitan dengan:
         </p>
         <ul className="mt-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 text-sm text-gray-300">
           {[
             "Solidity / EVM", "React / Vite / Tailwind", "ethers.js / wagmi", "Hardhat / Foundry",
-            "Smart Contract Security", "GitHub Actions / CI", "WSL / Docker", "Tech Education"
+            "Mythril / Slither", "GitHub Actions / CI", "WSL / Docker", "Tech Education"
           ].map((s) => (
             <li key={s} className="rounded-lg border border-white/10 px-3 py-2 bg-white/5">{s}</li>
           ))}
