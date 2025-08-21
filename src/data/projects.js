@@ -16,12 +16,12 @@ export const projects = [
     ],
   },
   {
-    title: "SmartFaith FNA Islamichat – Smart Faith Assistant",
+    title: "SmartFaith (Islamichat) – Smart Faith Assistant",
     period: "2025",
     description:
       "Asisten percakapan yang mengutamakan adab & etika. Rencana integrasi on-chain untuk jejak donasi & wakaf.",
     links: {
-      demo: "https://islamichat.streamlit.app/",
+      demo: "https://smartfaith.streamlit.app/",
       repo: "https://github.com/mrbrightsides/IslamiChat",
     },
     stack: ["Next.js / React", "Tailwind", "LangChain", "EVM (planned)"],

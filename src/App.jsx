@@ -43,7 +43,7 @@ export default function Portfolio() {
           Building Web3 tools & smart contract products.
         </motion.h1>
         <p className="mt-4 text-lg text-gray-300 text-justify">
-          Dosen & peneliti yang suka build, compile, deploy, dan ship produk: STC plugin serta seluruh ekosistemnya, SmartFaith FNA Islamichat, dan Web3 Rantai. Fokus pada Solidity, React, dan pengalaman
+          Dosen & peneliti yang suka build, compile, deploy, dan ship produk: STC plugin serta seluruh ekosistemnya, SmartFaith a.k.a Islamichat, dan Web3 Rantai. Fokus pada Solidity, React, dan pengalaman
           pembelajaran yang bermanfaat untuk komunitas.
         </p>
         <div className="mt-6 flex flex-wrap gap-3">
