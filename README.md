@@ -1,4 +1,4 @@
-# mrbrightsides.github.io
+# My Portfolio
 
 Personal portfolio website built with **React + Vite + TailwindCSS** and deployed via **GitHub Pages**.
 
