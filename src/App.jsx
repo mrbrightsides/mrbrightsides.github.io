@@ -94,7 +94,10 @@ export default function Portfolio() {
         </p>
         <div className="mt-4 flex flex-wrap gap-3">
           <a href="mailto:khudri@binadarma.ac.id" className="inline-flex items-center gap-2 rounded-xl px-4 py-2 bg-white text-black hover:opacity-90">
-            <Mail size={16}/> Email
+            <Mail size={16}/> Work Email
+          </a>
+          <a href="mailto:khudri@elpeef.com" className="inline-flex items-center gap-2 rounded-xl px-4 py-2 bg-transparent border border-white/20 hover:border-white/40">
+            <Mail size={16}/> Project Email
           </a>
         </div>
       </section>
