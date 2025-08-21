@@ -5,6 +5,8 @@ import { Github, Mail, ExternalLink, ArrowRight, Calendar, Code2, Link as LinkIc
 import Projects from "./components/Projects";
 import Activity from "./components/Activity";
 
+import CustomBadges from "./Components/CustomBadges";
+
 const links = [
   { href: "https://elpeef.com", label: "elpeef.com" },
   { href: "https://khudri.elpeef.com", label: "khudri.elpeef.com" },
@@ -59,6 +61,7 @@ export default function Portfolio() {
           >
             Live Activity <Calendar size={16} />
           </a>
+          <CustomBadges />
         </div>
       </section>
 
