@@ -2,3 +2,10 @@
 dist
 .vscode
 .env
+
+deploy.ps1
+
+node_modules
+dist
+.vscode
+.env

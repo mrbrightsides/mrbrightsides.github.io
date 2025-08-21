@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://mrbrightsides.github.io/sitemap.xml
