@@ -5,7 +5,7 @@ import { Github, Mail, ExternalLink, ArrowRight, Calendar, Code2, Link as LinkIc
 import Projects from "./components/Projects";
 import Activity from "./components/Activity";
 
-import CustomBadges from "./Components/CustomBadges";
+import CustomBadges from "./components/CustomBadges";
 
 const links = [
   { href: "https://elpeef.com", label: "elpeef.com" },
