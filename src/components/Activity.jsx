@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
-import { Code2, Github, Link as LinkIcon, Timer } from "lucide-react";
+import { Code2, Github, Link as LinkIcon, Timer, Globe } from "lucide-react";
 
-/** Quick links ditampilkan di bagian bawah */
 const quickLinks = [
   { label: "ELPEEF", href: "https://elpeef.com/", icon: Globe },
   { label: "My GitHub Profile", href: "https://github.com/mrbrightsides", icon: Github },
@@ -33,7 +32,7 @@ const getHackatimeImg = (id) =>
   `https://github-readme-stats.hackclub.dev/api/wakatime?username=${id}&api_domain=hackatime.hackclub.com&theme=darcula&layout=compact&langs_count=8&hide_border=true&border_radius=12`;
 
 const getGithubStats = (user) =>
-  `https://github-readme-stats.vercel.app/api?username=${user}&show_icons=true&theme=radical&hide_border=true&border_radius=12`;
+  `https://github-readme-stats.vercel.app/api?username=${user}&show_icons=true&hide_rank=true&theme=radical&hide_border=true&border_radius=12`;
 
 const getTopLangs = (user) =>
   `https://github-readme-stats.vercel.app/api/top-langs/?username=${user}&layout=compact&theme=radical&hide_border=true&border_radius=12`;

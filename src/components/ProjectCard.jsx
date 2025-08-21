@@ -1,64 +1,55 @@
 export default function ProjectCard({ project }) {
-  const { title, period, description, stack = [], links = {}, highlights = [] } = project;
+  if (!project) return null;
+
+  const {
+    title,
+    description,
+    links = {},
+    stack = [],
+    period,
+    highlights = [],
+  } = project;
 
   return (
-    <div className="rounded-2xl border border-white/10 bg-white/5 p-5 hover:bg-white/[0.08] transition">
-      <div className="flex items-baseline justify-between gap-4">
-        <h3 className="text-base md:text-lg font-semibold text-white">{title}</h3>
-        {period && <span className="text-xs text-white/50">{period}</span>}
-      </div>
+    <article className="rounded-xl border border-white/10 p-4 bg-white/5 h-full">
+      <h3 className="font-semibold text-white">{title}</h3>
+      {period && <div className="text-xs text-gray-400 mt-0.5">{period}</div>}
 
       {description && (
-        <p className="mt-2 text-sm text-gray-300 leading-relaxed">
-          {description}
-        </p>
+        <p className="text-gray-300 text-sm mt-2">{description}</p>
       )}
 
-      {Array.isArray(highlights) && highlights.length > 0 && (
-        <ul className="mt-3 text-xs text-gray-400 list-disc list-inside space-y-1">
-          {highlights.map((h, i) => (
-            <li key={i}>{h}</li>
+      {Array.isArray(stack) && stack.length > 0 && (
+        <ul className="flex flex-wrap gap-2 mt-3 text-xs text-gray-300">
+          {stack.map((s) => (
+            <li key={s} className="rounded-md border border-white/10 px-2 py-1 bg-white/5">
+              {s}
+            </li>
           ))}
         </ul>
       )}
 
-      {Array.isArray(stack) && stack.length > 0 && (
-        <div className="mt-4 flex flex-wrap gap-2">
-          {stack.map((tag) => (
-            <span
-              key={tag}
-              className="px-2 py-1 text-[11px] rounded-lg bg-white/10 text-white/70"
-            >
-              {tag}
-            </span>
+      {Array.isArray(highlights) && highlights.length > 0 && (
+        <ul className="mt-3 list-disc pl-4 space-y-1">
+          {highlights.map((h, i) => (
+            <li key={i} className="text-gray-300 text-sm">{h}</li>
           ))}
-        </div>
+        </ul>
       )}
 
-      {(links.demo || links.repo) && (
-        <div className="mt-4 flex items-center gap-4 text-sm">
-          {links.demo && (
-            <a
-              href={links.demo}
-              target="_blank"
-              rel="noreferrer"
-              className="text-blue-400 hover:underline"
-            >
-              Demo
-            </a>
-          )}
-          {links.repo && (
-            <a
-              href={links.repo}
-              target="_blank"
-              rel="noreferrer"
-              className="text-blue-400 hover:underline"
-            >
-              Repo
-            </a>
-          )}
-        </div>
-      )}
-    </div>
+      <div className="mt-4 text-sm flex gap-4">
+        {links?.demo && (
+          <a href={links.demo} target="_blank" rel="noreferrer" className="text-blue-300 hover:text-blue-200">
+            Demo →
+          </a>
+        )}
+        {/* tampilkan repo hanya kalau berupa URL */}
+        {links?.repo && String(links.repo).startsWith("http") && (
+          <a href={links.repo} target="_blank" rel="noreferrer" className="text-blue-300 hover:text-blue-200">
+            Repo →
+          </a>
+        )}
+      </div>
+    </article>
   );
 }

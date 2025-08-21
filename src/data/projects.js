@@ -36,8 +36,7 @@ export const projects = [
     description:
       "Boilerplate dApp untuk integrasi wallet, jaringan, dan komponen UI siap pakai. Sudah mampu SIWE.",
     links: {
-      demo: "https://rantai.elpeef.com",
-      repo: Tidak push ke GH
+      demo: "https://rantai.elpeef.com"
     },
     stack: ["React", "Vite", "wagmi/ethers", "Tailwind", "Framer Motion"],
     highlights: [
