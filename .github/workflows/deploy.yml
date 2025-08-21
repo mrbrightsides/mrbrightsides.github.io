@@ -7,8 +7,8 @@ on:
 
 permissions:
   contents: read
-  pages: write          # <- WAJIB untuk deploy-pages
-  id-token: write       # <- WAJIB untuk deploy-pages
+  pages: write
+  id-token: write
 
 concurrency:
   group: "pages"
@@ -27,11 +27,20 @@ jobs:
           node-version: 20
           cache: npm
 
-      - name: Install deps
-        run: npm ci
+      # GUNAKAN npm install kalau TIDAK ada package-lock.json
+      - name: Install dependencies
+        run: |
+          if [ -f package-lock.json ]; then
+            npm ci
+          else
+            npm install
+          fi
 
       - name: Build
-        run: npm run build
+        run: npm run build --if-present
+
+      - name: List dist
+        run: ls -la dist || echo "dist not found"  # bantu diagnosa
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
