@@ -1,6 +1,4 @@
-node_modules/
-dist/
+﻿node_modules
+dist
+.vscode
 .env
-*.log
-.DS_Store
-deploy.ps1
